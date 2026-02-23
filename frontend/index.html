@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixlCheck | AI vs Real Image Detector</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <img src="assets/logo_only.png" alt="PixlCheck Logo" height="100px" width="35px">
+          <span><h1>PixlCheck</h1></span>
+        </div>
+        <nav>
+            <a href="#how">How it Works</a>
+        </nav>
+
+    </div>
+</header>
+
+<!-- ================= HERO / LANDING ================= -->
+<section class="hero">
+    <div class="hero-container">
+
+        <!-- Left Content -->
+        <div class="hero-text">
+            <h1>
+                Detect <span>AI-Generated</span><br>
+                Images Instantly
+            </h1>
+
+            <p>
+                PixlCheck is a web-based tool that analyzes visual patterns
+                to determine whether an image is real or AI-generated —
+                fast, simple, and reliable.
+            </p>
+
+            <div class="stats">
+                <div>
+                    <h3>⚡ Seconds</h3>
+                    <span>Instant results</span>
+                </div>
+                <div>
+                    <h3>🧠 CNN</h3>
+                    <span>Deep learning model</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Upload Card -->
+        <div class="upload-box">
+          <p>Drag & drop your image here</p>
+          <span>or</span>
+
+          <button onclick="document.getElementById('imageUpload').click()">
+            Select Image
+          </button>
+
+          <input
+             type="file"
+             id="imageUpload"
+             accept="image/png, image/jpeg"
+             hidden
+    >
+    <p id="resultText" style="margin-top:15px;font-weight:bold;"></p>
+        </div>
+
+
+    </div>
+</section>
+ <!-- ================= HOW IT WORKS ================= -->
+<section class="steps" id="how">
+  <div class="steps-container">
+
+    <div class="step-card">
+      <div class="step-visual">
+        <div class="upload-box-demo">
+          <span>📤</span>
+          <p>Upload Image</p>
+        </div>
+      </div>
+      <h3>Step 1</h3>
+      <p>
+        Upload an image from your device or provide an image URL.
+        PixlCheck supports common formats like JPG and PNG.
+      </p>
+    </div>
+
+    <div class="step-card">
+      <div class="step-visual">
+        <div class="analyze-demo">
+          <div class="loader"></div>
+          <p>Analyzing</p>
+        </div>
+      </div>
+      <h3>Step 2</h3>
+      <p>
+        Our deep learning model examines visual patterns,
+        textures, and inconsistencies to detect AI generation.
+      </p>
+    </div>
+
+    <div class="step-card">
+      <div class="step-visual">
+        <div class="result-demo">
+          <span class="ai-tag">AI</span>
+          <div class="confidence-bar">
+            <span></span>
+          </div>
+        </div>
+      </div>
+      <h3>Step 3</h3>
+      <p>
+        Receive a clear authenticity result with confidence levels,
+        helping you decide whether the image is real or AI-made.
+      </p>
+    </div>
+
+  </div>
+</section>
+<!-- ================= AI IMAGE RISKS ================= -->
+<section class="risks">
+  <div class="risks-header">
+    <h2>
+      Don’t Be Misled by Visual Fakes:<br>
+      How <span>AI-Generated Images</span> Can Impact You
+    </h2>
+    <p>
+      AI-created visuals are advancing rapidly. While impressive,
+      they are increasingly used in harmful and misleading ways.
+      Understanding the risks is the first step toward staying informed.
+    </p>
+  </div>
+
+  <div class="risks-content">
+    <div class="risk-image">
+        <img src="assets/img2.png" alt="AI vs Real Image">
+        <img src="assets/img3.png" alt="AI vs Real Image">
+    </div>
+
+    <div class="risk-text">
+      <h3>Digital Misinformation</h3>
+      <p>
+        AI can fabricate realistic images of events or individuals that
+        never existed. These visuals can spread false narratives,
+        influence opinions, and damage credibility across digital platforms.
+      </p>
+
+      <h3>Identity & Reputation Abuse</h3>
+      <p>
+        Synthetic images may be used to impersonate people,
+        manipulate trust, or harm personal and professional reputations
+        without consent.
+      </p>
+    </div>
+  </div>
+</section>
+<section class="faq-section" id="faq">
+  <h2 class="faq-title">
+    Frequently Asked <span>Questions</span>
+  </h2>
+
+  <div class="faq-container">
+
+    <details class="faq-item">
+      <summary>
+        What is PixlCheck and what does it do?
+        <span class="icon">+</span>
+      </summary>
+      <p>
+        PixlCheck is an AI-powered web tool that analyzes images to determine
+        whether they are real photographs or AI-generated visuals using deep
+        learning techniques.
+      </p>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        How do I check if an image is AI-generated?
+        <span class="icon">+</span>
+      </summary>
+      <p>
+        Simply upload an image using the upload box on the homepage.
+        PixlCheck instantly processes the image and displays whether it is
+        AI-generated or real.
+      </p>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        Does PixlCheck work on mobile devices?
+        <span class="icon">+</span>
+      </summary>
+      <p>
+        Yes. PixlCheck is fully responsive and works seamlessly on desktops,
+        tablets, and smartphones without requiring any installation.
+      </p>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        What image formats are supported?
+        <span class="icon">+</span>
+      </summary>
+      <p>
+        PixlCheck currently supports JPG and PNG image formats with a maximum
+        upload size of 8MB per image.
+      </p>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        Are uploaded images stored on your servers?
+        <span class="icon">+</span>
+      </summary>
+      <p>
+        No. PixlCheck respects user privacy. Uploaded images are processed
+        temporarily and are not stored after analysis.
+      </p>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        Can PixlCheck be integrated into other platforms?
+        <span class="icon">+</span>
+      </summary>
+      <p>
+        API integration is planned for future releases, enabling developers
+        and organizations to integrate PixlCheck into their workflows.
+      </p>
+    </details>
+
+  </div>
+</section>
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Brand -->
+    <div class="footer-brand">
+      <img src="assets/logo_side.png" alt="PixlCheck Logo">
+      <p>
+        PixlCheck helps you verify whether an image is real or AI-generated using
+        advanced deep learning techniques.
+      </p>
+    </div>
+
+    <!-- Links -->
+    <div class="footer-links">
+      <h4>Company</h4>
+      <a href="#">About PixlCheck</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#faq">FAQs</a>
+    </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    © 2025 PixlCheck. All rights reserved.
+  </div>
+</footer>
+<script>
+const input = document.getElementById("imageUpload");
+const resultText = document.getElementById("resultText");
+
+input.addEventListener("change", async () => {
+    if (!input.files.length) return;
+
+    resultText.innerText = "Analyzing image...";
+
+    const formData = new FormData();
+    formData.append("image", input.files[0]);
+
+    try {
+        const response = await fetch("http://127.0.0.1:5000/predict", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await response.json();
+
+        if (data.error) {
+            resultText.innerText = "Error: " + data.error;
+        } else {
+            resultText.innerText =
+                `${data.result} (${data.confidence}%)`;
+        }
+
+    } catch (err) {
+        resultText.innerText = "Server not reachable";
+    }
+});
+</script>
+
+</body>
+</html>

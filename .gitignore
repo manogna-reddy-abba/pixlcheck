@@ -1,0 +1,15 @@
+# Environments
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Mac system files
+.DS_Store
+
+# (Optional) If your .keras model is over 100MB, GitHub will reject it. 
+# If it's under 100MB, you can leave the next line commented out. 
+# *.keras
+backend/model/*.keras

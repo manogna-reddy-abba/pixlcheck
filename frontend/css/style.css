@@ -1,0 +1,500 @@
+/* ================= GLOBAL ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: linear-gradient(180deg, #f8faff, #eef2ff);
+    color: #0f172a;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    padding: 20px 40px;
+    background: #ffffff;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.logo img {
+    height: 32px;
+}
+
+nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #334155;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #2563eb;
+}
+
+/* ================= HERO ================= */
+.hero {
+    padding: 80px 40px;
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* Left Text */
+.hero-text h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+.hero-text h1 span {
+    color: #2563eb;
+}
+
+.hero-text p {
+    margin: 25px 0;
+    font-size: 1.05rem;
+    color: #475569;
+    max-width: 520px;
+}
+
+.stats {
+    display: flex;
+    gap: 30px;
+}
+
+.stats h3 {
+    color: #2563eb;
+}
+
+.stats span {
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+/* Upload Card */
+.upload-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.upload-card h3 {
+    margin-bottom: 20px;
+}
+
+.upload-box {
+    border: 2px dashed #c7d2fe;
+    border-radius: 16px;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.upload-box p {
+    font-weight: 500;
+}
+
+.upload-box span {
+    display: block;
+    margin: 10px 0;
+    color: #64748b;
+}
+
+.upload-box button {
+    padding: 10px 22px;
+    border: none;
+    background: #2563eb;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.upload-box button:hover {
+    background: #1e40af;
+}
+
+.note {
+    margin-top: 15px;
+    font-size: 0.8rem;
+    color: #64748b;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.4rem;
+    }
+
+    nav {
+        display: none;
+    }
+}
+/* ================= HOW IT WORKS ================= */
+.steps {
+    padding: 80px 20px;
+    background: #f8fafc;
+}
+
+.steps-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.step-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px 25px 35px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+}
+
+.step-visual {
+    margin-bottom: 25px;
+}
+
+/* STEP 1 DEMO */
+.upload-box-demo {
+    border: 2px dashed #c7d2fe;
+    border-radius: 16px;
+    padding: 35px 20px;
+    color: #2563eb;
+}
+
+.upload-box-demo span {
+    font-size: 2rem;
+    display: block;
+}
+
+/* STEP 2 DEMO */
+.analyze-demo {
+    background: #f1f5ff;
+    border-radius: 16px;
+    padding: 40px 20px;
+}
+
+.loader {
+    width: 32px;
+    height: 32px;
+    border: 4px solid #c7d2fe;
+    border-top: 4px solid #2563eb;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* STEP 3 DEMO */
+.result-demo {
+    background: #f8fafc;
+    border-radius: 16px;
+    padding: 30px 20px;
+}
+
+.ai-tag {
+    display: inline-block;
+    background: #2563eb;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.confidence-bar {
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.confidence-bar span {
+    display: block;
+    height: 100%;
+    width: 70%;
+    background: linear-gradient(90deg, #60a5fa, #22c55e);
+}
+
+/* Text */
+.step-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.step-card p {
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.6;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+    .steps-container {
+        grid-template-columns: 1fr;
+    }
+}
+/* ================= AI IMAGE RISKS ================= */
+.risks {
+    padding: 90px 20px;
+    background: linear-gradient(180deg, #f8faff, #eef2ff);
+}
+
+.risks-header {
+    max-width: 850px;
+    margin: 0 auto 70px;
+    text-align: center;
+}
+
+.risks-header h2 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1.25;
+    color: #0f172a;
+}
+
+.risks-header h2 span {
+    color: #2563eb;
+}
+
+.risks-header p {
+    margin-top: 25px;
+    font-size: 1.05rem;
+    color: #475569;
+    line-height: 1.7;
+}
+
+/* Content */
+.risks-content {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* Image */
+.risk-image img {
+    width: 100%;
+    border-radius: 22px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+}
+
+/* Text */
+.risk-text h3 {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+    color: #0f172a;
+}
+
+.risk-text p {
+    margin-bottom: 30px;
+    color: #475569;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+    .risks-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .risks-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .risk-text {
+        text-align: center;
+    }
+}
+/* ================= FOOTER ================= */
+.footer {
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  margin-top: 80px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+/* Brand section */
+.footer-brand img {
+  height: 60px;
+  margin-bottom: 16px;
+}
+
+.footer-brand p {
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.6;
+  max-width: 300px;
+}
+
+/* Links */
+.footer-links h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #0f172a;
+}
+
+.footer-links a {
+  display: block;
+  font-size: 14px;
+  color: #475569;
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #2563eb;
+}
+
+/* Bottom bar */
+.footer-bottom {
+  text-align: center;
+  padding: 16px;
+  font-size: 13px;
+  color: #64748b;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-brand p {
+    margin: auto;
+  }
+}
+/* FAQ Section */
+.faq-section {
+  padding: 80px 20px;
+  background: linear-gradient(to bottom, #f7faff, #ffffff);
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #0f172a;
+}
+
+.faq-title span {
+  color: #2563eb;
+}
+
+/* FAQ Container */
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Individual FAQ Item */
+.faq-item {
+  background: #ffffff;
+  border-radius: 14px;
+  margin-bottom: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+/* Summary (Question) */
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 20px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #0f172a;
+}
+
+/* Remove default arrow */
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Plus Icon */
+.faq-item .icon {
+  font-size: 22px;
+  color: #2563eb;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate icon when open */
+.faq-item[open] .icon {
+  transform: rotate(45deg);
+}
+
+/* Answer */
+.faq-item p {
+  padding: 0 24px 20px;
+  font-size: 15px;
+  color: #475569;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .faq-title {
+    font-size: 28px;
+  }
+
+  .faq-item summary {
+    font-size: 15px;
+  }
+}
